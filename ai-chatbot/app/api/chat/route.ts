@@ -30,7 +30,7 @@ export async function POST(req: Request) {
       model: anthropic(model || 'claude-sonnet-4-6'),
       system: SYSTEM_PROMPT,
       messages,
-      maxOutputTokens: 4096,
+      maxTokens: 4096,
     });
 
     return result.toTextStreamResponse();
