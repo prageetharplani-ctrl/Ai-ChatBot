@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #16171B;
+  color: #EDEAE3;
+}
+
+/* thin, quiet scrollbars that match the ink palette */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2A2D34 transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #2A2D34;
+  border-radius: 999px;
+}
+
+/* visible keyboard focus everywhere */
+:focus-visible {
+  outline: 2px solid #4FA98C;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.prose-relay {
+  color: #EDEAE3;
+  line-height: 1.65;
+}
+.prose-relay p { margin: 0.65em 0; }
+.prose-relay ul, .prose-relay ol { margin: 0.5em 0; padding-left: 1.4em; }
+.prose-relay li { margin: 0.25em 0; }
+.prose-relay a { color: #4FA98C; text-decoration: underline; text-underline-offset: 2px; }
+.prose-relay code { font-family: var(--font-jetbrains), monospace; font-size: 0.875em; background: #2A2D34; padding: 0.15em 0.4em; border-radius: 4px; }
+.prose-relay pre { background: transparent; padding: 0; margin: 0.75em 0; }
+.prose-relay pre code { background: transparent; padding: 0; }
+.prose-relay blockquote { border-left: 2px solid #4FA98C; padding-left: 1em; color: #8B8D97; margin: 0.75em 0; }
+.prose-relay h1, .prose-relay h2, .prose-relay h3 { font-family: var(--font-fraunces), serif; font-weight: 600; margin: 0.9em 0 0.4em; }
+.prose-relay table { border-collapse: collapse; margin: 0.75em 0; }
+.prose-relay th, .prose-relay td { border: 1px solid #2A2D34; padding: 0.4em 0.75em; }
